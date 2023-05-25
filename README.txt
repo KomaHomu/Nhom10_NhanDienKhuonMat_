@@ -17,3 +17,6 @@
 + Tệp CMU_FACE_Data: chứa CMU FACE dataset lấy từ https://archive.ics.uci.edu/ml/datasets/CMU+Face+Images, chi tiết nằm trong báo cáo.
 + Chi tiết về mặt cơ sở lý thuyết nằm ở trong báo cáo đính kèm.
 + Slide thuyết trình.
+
+Link SourceForge: https://sourceforge.net/projects/nhom10-nhandienkhuonmat/
+Link Github: https://github.com/KomaHomu/Nhom10_NhanDienKhuonMat_
