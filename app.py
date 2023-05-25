@@ -118,7 +118,7 @@ def train_knn_model():
 def capture_images(label):
     captured_images = 0
 
-    while captured_images < 100:
+    while captured_images < 200:
         success, frame = camera.read()
         if not success:
             break
@@ -212,8 +212,8 @@ def train_model():
     selected_model = request.args.get('model')
     label = request.args.get('label')
 
-    if len(training_data) < 100:
-        return "Insufficient training data. Please capture 100 images first."
+    if len(training_data) < 200:
+        return "Insufficient training data. Please capture 200 images first."
 
     if model is None:
         if selected_model == 'knn':

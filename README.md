@@ -9,9 +9,9 @@
 
 3. Truy cập giao diện web: Khi máy chủ Flask đang chạy, bạn có thể truy cập giao diện web bằng cách mở trình duyệt và redirect đến link hiện trên terminal (e.g: http://localhost:5000).
 
-4. Chụp ảnh huấn luyện: Nhập tên của bạn vào trường "Enter your name" và nhấp vào nút "Capture". 100 ảnh khuôn mặt của bạn sẽ được chụp bằng camera thiết bị (hiển thị ở một luồng video hiển thị bên cạnh). Tất cả các ảnh sẽ được gán label là tên bạn đã nhập. Vì vậy, nếu muốn nhận diện nhiều người, bạn hãy lần lượt nhập tên từng người và để họ đứng trước camera.
+4. Chụp ảnh huấn luyện: Nhập tên của bạn vào trường "Enter your name" và nhấp vào nút "Capture". 200 ảnh khuôn mặt của bạn sẽ được chụp bằng camera thiết bị (hiển thị ở một luồng video hiển thị bên cạnh). Tất cả các ảnh sẽ được gán label là tên bạn đã nhập. Vì vậy, nếu muốn nhận diện nhiều người, bạn hãy lần lượt nhập tên từng người và để họ đứng trước camera.
 
-5. Huấn luyện mô hình: Sau khi chụp ảnh, chọn một mô hình huấn luyện (KNN, Frequent Pattern hoặc Genetic) từ menu dropdown và nhấp vào nút "Recognize Me". Mô hình sẽ được huấn luyện bằng đã chọn bằng các ảnh đã chụp. Cần ít nhất là 100 ảnh để thực hiện huấn luyện (hiện tại, 100 ảnh này có thể có cùng hoặc khác label, sẽ được cập nhật để đảm bảo 100 ảnh/label sau). Lưu ý: các mô hình sẽ có thời gian huấn luyện khác nhau, lâu nhất là Genetic, hãy đợi đến khi ứng dụng thông báo huấn luyện thành công!
+5. Huấn luyện mô hình: Sau khi chụp ảnh, chọn một mô hình huấn luyện (KNN, Frequent Pattern hoặc Genetic) từ menu dropdown và nhấp vào nút "Recognize Me". Mô hình sẽ được huấn luyện bằng đã chọn bằng các ảnh đã chụp. Cần ít nhất là 200 ảnh để thực hiện huấn luyện (hiện tại, 100 ảnh này có thể có cùng hoặc khác label, sẽ được cập nhật để đảm bảo 100 ảnh/label sau). Lưu ý: các mô hình sẽ có thời gian huấn luyện khác nhau, lâu nhất là Genetic, hãy đợi đến khi ứng dụng thông báo huấn luyện thành công!
 
 6. Thực hiện nhận dạng khuôn mặt: Luồng video từ camera sẽ được hiển thị trên trang web. Nếu nhận dạng khuôn mặt được bật và mô hình đã được huấn luyện, các khuôn mặt được nhận dạng sẽ được đánh dấu bằng một hình chữ nhật và được gắn nhãn với tên tương ứng của chúng.
 
