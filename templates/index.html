@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Recognition</title>
+    <link rel="icon" type="image/x-icon" href="/eye.png">
+</head>
+<body>
+    <h1>Face Recognition</h1>
+    <img src="{{ url_for('video_feed') }}" width="640" height="480" />
+    <br>
+    <label for="model_select">Select Training Model:</label>
+    <select id="model_select">
+        <option value="knn">KNN</option>
+        <option value="frequent_pattern">Frequent Pattern</option>
+        <option value="genetic">Genetic</option>
+    </select>
+    <button onclick="trainModel()">Recognize Me</button>
+    <script>
+        function trainModel() {
+            var modelSelect = document.getElementById("model_select");
+            var selectedModel = modelSelect.value;
+            var label = document.getElementById("label_input").value;
+            
+            fetch('/train_model?model=' + selectedModel + '&label=' + label)
+                .then(response => response.text())
+                .then(message => alert(message));
+        }
+    </script>
+    <form id="capture_form" class="hidden" onsubmit="captureImages(event)">
+        <label for="label_input">Enter your name:</label>
+        <input type="text" id="label_input" required>
+        <button type="submit">Capture</button>
+    </form>
+    <script>
+        function showForm() {
+            var form = document.getElementById("capture_form");
+            form.classList.remove("hidden");
+        }
+
+        function captureImages(event) {
+            event.preventDefault();
+            var label = document.getElementById("label_input").value;
+            if (label.trim() === "") {
+                alert("Please enter a label.");
+                return;
+            }
+            fetch('/capture_images?label=' + label)
+                .then(response => response.text())
+                .then(message => alert(message));
+        }
+    </script>
+</body>
+</html>
