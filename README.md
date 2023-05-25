@@ -22,5 +22,5 @@
 + Slide thuyết trình.
 
 ## Links
-Link SourceForge: https://sourceforge.net/projects/nhom10-nhandienkhuonmat/
+Link SourceForge: https://sourceforge.net/projects/nhom10-nhandienkhuonmat/  
 Link Github: https://github.com/KomaHomu/Nhom10_NhanDienKhuonMat_
